@@ -6,8 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile-dev-support
     volumes:
-      - .:/go/src
-    working_dir: /app
+      - .:/go/src/yc-zhang/sample-price-service
+    working_dir: /go/src/yc-zhang/sample-price-service
 
   dev:
     extends:
