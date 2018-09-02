@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  _base:
+    image: golang:1.11.0
+    volumes:
+      - .:/app
+      - ./vendor:/go/src
+    working_dir: /app
+
+  dev:
+    extends:
+      service: _base
