@@ -2,10 +2,11 @@ version: '2'
 
 services:
   _base:
-    image: golang:1.11.0
+    build:
+      context: .
+      dockerfile: Dockerfile-dev-support
     volumes:
-      - .:/app
-      - ./vendor:/go/src
+      - .:/go/src
     working_dir: /app
 
   dev:
