@@ -20,5 +20,9 @@ services:
     depends_on:
       - redis
 
+  publish:
+    extends:
+      service: _base
+
   redis:
     image: redis:3.0
